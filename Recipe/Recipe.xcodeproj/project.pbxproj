@@ -22,6 +22,9 @@
 		A179D01E2AD082A8008F876A /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = A179D01D2AD082A8008F876A /* MockData.json */; };
 		A179D0212AD0890F008F876A /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = A179D0202AD0890F008F876A /* Defaults */; };
 		A179D0242AD08959008F876A /* Defaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D0232AD08959008F876A /* Defaults+Keys.swift */; };
+		A179D0262AD08D09008F876A /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D0252AD08D09008F876A /* RecipeCell.swift */; };
+		A179D0292AD08DC3008F876A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A179D0282AD08DC3008F876A /* Kingfisher */; };
+		A179D02D2AD093D4008F876A /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = A179D02C2AD093D4008F876A /* netfox */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,7 @@
 		A15CECE42AD07D8C003E9DAD /* RecipeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewModel.swift; sourceTree = "<group>"; };
 		A179D01D2AD082A8008F876A /* MockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
 		A179D0232AD08959008F876A /* Defaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Keys.swift"; sourceTree = "<group>"; };
+		A179D0252AD08D09008F876A /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A179D0292AD08DC3008F876A /* Kingfisher in Frameworks */,
 				A179D0212AD0890F008F876A /* Defaults in Frameworks */,
+				A179D02D2AD093D4008F876A /* netfox in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				A15CECE22AD07D60003E9DAD /* RecipeListView.swift */,
+				A179D0252AD08D09008F876A /* RecipeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +209,8 @@
 			name = Recipe;
 			packageProductDependencies = (
 				A179D0202AD0890F008F876A /* Defaults */,
+				A179D0282AD08DC3008F876A /* Kingfisher */,
+				A179D02C2AD093D4008F876A /* netfox */,
 			);
 			productName = Recipe;
 			productReference = A119016A2AD06AA400AF6FDD /* Recipe.app */;
@@ -256,6 +265,8 @@
 			mainGroup = A11901612AD06AA300AF6FDD;
 			packageReferences = (
 				A179D01F2AD0890F008F876A /* XCRemoteSwiftPackageReference "Defaults" */,
+				A179D0272AD08DC3008F876A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				A179D02B2AD093D4008F876A /* XCRemoteSwiftPackageReference "netfox" */,
 			);
 			productRefGroup = A119016B2AD06AA400AF6FDD /* Products */;
 			projectDirPath = "";
@@ -297,6 +308,7 @@
 				A11901A32AD0742D00AF6FDD /* EdamamService.swift in Sources */,
 				A179D0242AD08959008F876A /* Defaults+Keys.swift in Sources */,
 				A11901A02AD0732700AF6FDD /* RecipesModel.swift in Sources */,
+				A179D0262AD08D09008F876A /* RecipeCell.swift in Sources */,
 				A119019E2AD072C200AF6FDD /* RecipeService.swift in Sources */,
 				A15CECE32AD07D60003E9DAD /* RecipeListView.swift in Sources */,
 				A119016E2AD06AA400AF6FDD /* RecipeApp.swift in Sources */,
@@ -605,6 +617,22 @@
 				version = 7.3.1;
 			};
 		};
+		A179D0272AD08DC3008F876A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		A179D02B2AD093D4008F876A /* XCRemoteSwiftPackageReference "netfox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kasketis/netfox";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -612,6 +640,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A179D01F2AD0890F008F876A /* XCRemoteSwiftPackageReference "Defaults" */;
 			productName = Defaults;
+		};
+		A179D0282AD08DC3008F876A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A179D0272AD08DC3008F876A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		A179D02C2AD093D4008F876A /* netfox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A179D02B2AD093D4008F876A /* XCRemoteSwiftPackageReference "netfox" */;
+			productName = netfox;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

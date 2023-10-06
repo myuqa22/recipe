@@ -17,29 +17,39 @@ struct RecipeListView: View {
     var body: some View {
         
         NavigationStack {
-            VStack {
-                Text("Searching for: \(viewModel.query)")
-                ScrollView {
-                    VStack {
-                        ForEach(viewModel.recipes, id: \.label) { recipe in
-                            Text(recipe.label)
+            ZStack {
+                Color.gray.opacity(0.1).ignoresSafeArea()
+                VStack {
+                    Text("Searching for: \(viewModel.query)")
+                    ScrollView {
+                        VStack {
+                            ForEach(viewModel.recipes, id: \.label) { recipe in
+                                RecipeCell(recipe: recipe)
+                                    .padding(.horizontal, 20)
+                            }
                         }
+                        .scrollDismissesKeyboard(.immediately)
                     }
-                    .scrollDismissesKeyboard(.immediately)
                 }
+                .navigationTitle("Recipe Search")
+                .padding(0)
             }
-            .navigationTitle("Recipe Search")
         }
-        .searchable(text: $viewModel.query, suggestions: {
-            ForEach(searchHistory, id: \.hashValue) { query in
-                Button {
-                    viewModel.processAction(action: .selectSearchHistoryQuery(query))
-                } label: {
-                    Label(query, systemImage: "bookmark")
+        .searchable(
+            text: $viewModel.query,
+            suggestions: {
+                ForEach(searchHistory, id: \.hashValue) { query in
+                    Button {
+                        viewModel.processAction(action: .selectSearchHistoryQuery(query))
+                    } label: {
+                        Label(query, systemImage: "bookmark")
+                    }
                 }
-            }
-        })
+            })
         .onSubmit(of: .search) {
+            viewModel.processAction(action: .startSearch)
+        }
+        .onAppear {
             viewModel.processAction(action: .startSearch)
         }
     }

@@ -7,7 +7,14 @@
 
 import SwiftUI
 
+import netfox
+
 struct ContentView: View {
+    
+    init() {
+        NFX.sharedInstance().start()
+    }
+    
     var body: some View {
         RecipeListView()
     }

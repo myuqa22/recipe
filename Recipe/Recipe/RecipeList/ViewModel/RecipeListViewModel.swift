@@ -20,13 +20,17 @@ class RecipeListViewModel: ObservableObject {
         case selectSearchHistoryQuery(String)
     }
     
-    func processAction(action: Action) {
+    func processAction(action: Action){
         switch action {
         case .startSearch:
-            recipes = service.getRecipes(by: query)
+            Task {
+                recipes = try await service.getRecipes(by: query)
+            }
         case .selectSearchHistoryQuery(let searchHistoryQuery):
             query = searchHistoryQuery
-            recipes = service.getRecipes(by: searchHistoryQuery)
+            Task {
+                recipes = try await service.getRecipes(by: searchHistoryQuery)
+            }
         }
     }
 }

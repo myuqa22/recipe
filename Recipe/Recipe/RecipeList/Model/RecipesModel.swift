@@ -20,7 +20,6 @@ struct RecipeContent: Codable {
 }
 
 struct Recipe: Codable {
-    let uri: String
     let label: String
     let image: String
     let images: ImagesType
