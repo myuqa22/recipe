@@ -16,7 +16,7 @@ class RecipeListViewModel: ObservableObject {
     @Published var query: String = String()
     @Published var isLoading: Bool = false
     
-    let service = RecipeService(apiService: EdamamService())
+    let service = RecipesService(apiService: EdamamService())
     
     var nextPageUrl: String?
     
@@ -46,8 +46,8 @@ class RecipeListViewModel: ObservableObject {
                 }
             }
         case .selectSearchHistoryQuery(let searchHistoryQuery):
-            query = searchHistoryQuery
             Task {
+                query = searchHistoryQuery
                 do {
                     isLoading = true
                     if let recipesDto = try await service.getRecipes(by: searchHistoryQuery) {

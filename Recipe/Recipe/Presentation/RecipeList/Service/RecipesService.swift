@@ -1,5 +1,5 @@
 //
-//  RecipeService.swift
+//  RecipesService.swift
 //  Recipe
 //
 //  Created by Privat on 06.10.23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RecipeService {
+class RecipesService {
     
     let apiService: EdamamServiceProtocol
     

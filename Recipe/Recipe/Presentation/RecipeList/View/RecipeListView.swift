@@ -11,12 +11,14 @@ import Defaults
 
 struct RecipeListView: View {
     
+    @EnvironmentObject var router: Router
+    
     @StateObject var viewModel = RecipeListViewModel()
     @Default(.searchHistory) var searchHistory
     
     var body: some View {
         
-        NavigationStack {
+        NavigationStack(path: $router.path) {
             ZStack {
                 Color.gray.opacity(0.1).ignoresSafeArea()
                 VStack {
@@ -35,6 +37,10 @@ struct RecipeListView: View {
                             ForEach(viewModel.recipes, id: \.uri) { recipe in
                                 RecipeCellView(recipe: recipe)
                                     .padding(.horizontal, 10)
+                                    .clipShape(Rectangle())
+                                    .onTapGesture {
+                                        router.path.append(.detail(recipe))
+                                    }
                             }
                             if viewModel.nextPageUrl != nil {
                                 ProgressView()
@@ -45,6 +51,7 @@ struct RecipeListView: View {
                             }
                         }
                         .scrollDismissesKeyboard(.immediately)
+                        
                     }
                 }
                 .navigationTitle("Recipe Search")
@@ -55,6 +62,13 @@ struct RecipeListView: View {
                     ProgressView()
                         .scaleEffect(1.5)
                 }
+            }
+            .navigationDestination(for: Router.NavigationPath.self) { path in
+                switch path {
+                case let .detail(recipe):
+                    RecipeDetailView(recipe: recipe)
+                }
+                
             }
         }
         .refreshable {

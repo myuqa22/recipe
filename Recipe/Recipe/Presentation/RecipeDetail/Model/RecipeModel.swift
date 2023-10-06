@@ -7,32 +7,7 @@
 
 import Foundation
 
-struct RecipesDto: Codable {
-    
-    let from: Int?
-    let to: Int?
-    let count: Int?
-    let _links: LinksContent?
-    let hits: [RecipeContent]?
-}
-
-struct LinksContent: Codable {
-    
-    let next: NextContent?
-}
-
-struct NextContent: Codable {
-    
-    let href: String?
-    let title: String?
-}
-
-struct RecipeContent: Codable {
-    
-    let recipe: Recipe?
-}
-
-struct Recipe: Codable {
+struct Recipe: Codable, Hashable {
     
     let uri: String
     let label: String?
@@ -48,33 +23,29 @@ struct Recipe: Codable {
     let ingredientLines: [String]?
     let ingredients: [Ingredient]?
     let calories: Double?
-//    let totalCO2Emissions: Double?
     let co2EmissionsClass: String?
     let totalWeight: Double?
     let totalTime: Double?
     let cuisineType: [String]?
     let mealType: [String]?
     let dishType: [String]?
-//    let totalNutrients:
-//    let totalDaily:
-//    let digest:
 }
 
-struct ImageContent: Codable {
-    
-    let url: String?
-    let width: Int?
-    let height: Int?
-}
-
-struct ImagesType: Codable {
+struct ImagesType: Codable, Hashable {
     
     let THUMBNAIL: ImageContent?
     let SMALL: ImageContent?
     let REGULAR: ImageContent?
 }
 
-struct Ingredient: Codable {
+struct ImageContent: Codable, Hashable {
+    
+    let url: String?
+    let width: Int?
+    let height: Int?
+}
+
+struct Ingredient: Codable, Hashable {
     
     let text: String?
     let quantity: Double?

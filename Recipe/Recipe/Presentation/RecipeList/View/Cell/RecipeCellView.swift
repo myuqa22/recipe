@@ -26,7 +26,7 @@ struct RecipeCellView: View {
             
             Spacer()
             
-            KFImage(URL(string: (recipe.image ?? String())!))
+            KFImage(URL(string: (recipe.images?.THUMBNAIL?.url ?? String())!))
                 .resizable()
                 .scaledToFit()
                 .frame(height: 100)

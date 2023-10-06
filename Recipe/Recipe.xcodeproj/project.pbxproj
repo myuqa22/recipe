@@ -12,7 +12,7 @@
 		A11901722AD06AA400AF6FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11901712AD06AA400AF6FDD /* Assets.xcassets */; };
 		A11901762AD06AA400AF6FDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11901752AD06AA400AF6FDD /* Preview Assets.xcassets */; };
 		A11901802AD06AA500AF6FDD /* RecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119017F2AD06AA500AF6FDD /* RecipeTests.swift */; };
-		A119019E2AD072C200AF6FDD /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119019D2AD072C200AF6FDD /* RecipeService.swift */; };
+		A119019E2AD072C200AF6FDD /* RecipesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119019D2AD072C200AF6FDD /* RecipesService.swift */; };
 		A11901A02AD0732700AF6FDD /* RecipesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119019F2AD0732700AF6FDD /* RecipesModel.swift */; };
 		A11901A32AD0742D00AF6FDD /* EdamamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11901A22AD0742D00AF6FDD /* EdamamService.swift */; };
 		A11901A52AD0760100AF6FDD /* EdamamServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11901A42AD0760100AF6FDD /* EdamamServiceMock.swift */; };
@@ -26,6 +26,11 @@
 		A179D0292AD08DC3008F876A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A179D0282AD08DC3008F876A /* Kingfisher */; };
 		A179D02D2AD093D4008F876A /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = A179D02C2AD093D4008F876A /* netfox */; };
 		A179D02F2AD09FBD008F876A /* RecipeModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D02E2AD09FBD008F876A /* RecipeModelMock.swift */; };
+		A179D0372AD0BA05008F876A /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D0362AD0BA05008F876A /* RecipeModel.swift */; };
+		A179D0392AD0BA6D008F876A /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D0382AD0BA6D008F876A /* RecipeDetailViewModel.swift */; };
+		A179D03B2AD0BA90008F876A /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D03A2AD0BA90008F876A /* RecipeDetailView.swift */; };
+		A179D03E2AD0BBF2008F876A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D03D2AD0BBF2008F876A /* Router.swift */; };
+		A179D0402AD0BD83008F876A /* RecipeModelWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D03F2AD0BD83008F876A /* RecipeModelWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +52,7 @@
 		A11901752AD06AA400AF6FDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A119017B2AD06AA500AF6FDD /* RecipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A119017F2AD06AA500AF6FDD /* RecipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTests.swift; sourceTree = "<group>"; };
-		A119019D2AD072C200AF6FDD /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
+		A119019D2AD072C200AF6FDD /* RecipesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesService.swift; sourceTree = "<group>"; };
 		A119019F2AD0732700AF6FDD /* RecipesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesModel.swift; sourceTree = "<group>"; };
 		A11901A22AD0742D00AF6FDD /* EdamamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamService.swift; sourceTree = "<group>"; };
 		A11901A42AD0760100AF6FDD /* EdamamServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamServiceMock.swift; sourceTree = "<group>"; };
@@ -58,6 +63,11 @@
 		A179D0232AD08959008F876A /* Defaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Keys.swift"; sourceTree = "<group>"; };
 		A179D0252AD08D09008F876A /* RecipeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellView.swift; sourceTree = "<group>"; };
 		A179D02E2AD09FBD008F876A /* RecipeModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModelMock.swift; sourceTree = "<group>"; };
+		A179D0362AD0BA05008F876A /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		A179D0382AD0BA6D008F876A /* RecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModel.swift; sourceTree = "<group>"; };
+		A179D03A2AD0BA90008F876A /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		A179D03D2AD0BBF2008F876A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A179D03F2AD0BD83008F876A /* RecipeModelWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModelWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +114,9 @@
 			children = (
 				A119016D2AD06AA400AF6FDD /* RecipeApp.swift */,
 				A119016F2AD06AA400AF6FDD /* ContentView.swift */,
-				A11901982AD071F900AF6FDD /* RecipeList */,
-				A11901A12AD073F000AF6FDD /* Edamam API */,
-				A179D0222AD08943008F876A /* Defaults */,
+				A179D03D2AD0BBF2008F876A /* Router.swift */,
+				A179D0302AD0B6FE008F876A /* Presentation */,
+				A179D0312AD0B751008F876A /* Helper */,
 				A11901712AD06AA400AF6FDD /* Assets.xcassets */,
 				A11901732AD06AA400AF6FDD /* Recipe.entitlements */,
 				A11901742AD06AA400AF6FDD /* Preview Content */,
@@ -146,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				A119019F2AD0732700AF6FDD /* RecipesModel.swift */,
-				A179D02E2AD09FBD008F876A /* RecipeModelMock.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,8 +163,8 @@
 		A119019A2AD0722600AF6FDD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A179D03C2AD0BAA2008F876A /* Cell */,
 				A15CECE22AD07D60003E9DAD /* RecipeListView.swift */,
-				A179D0252AD08D09008F876A /* RecipeCellView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,7 +180,7 @@
 		A119019C2AD0723A00AF6FDD /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				A119019D2AD072C200AF6FDD /* RecipeService.swift */,
+				A119019D2AD072C200AF6FDD /* RecipesService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -192,6 +201,68 @@
 				A179D0232AD08959008F876A /* Defaults+Keys.swift */,
 			);
 			path = Defaults;
+			sourceTree = "<group>";
+		};
+		A179D0302AD0B6FE008F876A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A11901982AD071F900AF6FDD /* RecipeList */,
+				A179D0322AD0B77F008F876A /* RecipeDetail */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A179D0312AD0B751008F876A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A11901A12AD073F000AF6FDD /* Edamam API */,
+				A179D0222AD08943008F876A /* Defaults */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		A179D0322AD0B77F008F876A /* RecipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A179D0332AD0B794008F876A /* Model */,
+				A179D0342AD0B7A2008F876A /* View */,
+				A179D0352AD0B7AB008F876A /* ViewModel */,
+			);
+			path = RecipeDetail;
+			sourceTree = "<group>";
+		};
+		A179D0332AD0B794008F876A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A179D0362AD0BA05008F876A /* RecipeModel.swift */,
+				A179D03F2AD0BD83008F876A /* RecipeModelWrapper.swift */,
+				A179D02E2AD09FBD008F876A /* RecipeModelMock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A179D0342AD0B7A2008F876A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A179D03A2AD0BA90008F876A /* RecipeDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A179D0352AD0B7AB008F876A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A179D0382AD0BA6D008F876A /* RecipeDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A179D03C2AD0BAA2008F876A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A179D0252AD08D09008F876A /* RecipeCellView.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,14 +378,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A11901A52AD0760100AF6FDD /* EdamamServiceMock.swift in Sources */,
+				A179D0392AD0BA6D008F876A /* RecipeDetailViewModel.swift in Sources */,
 				A11901702AD06AA400AF6FDD /* ContentView.swift in Sources */,
 				A11901A32AD0742D00AF6FDD /* EdamamService.swift in Sources */,
 				A179D0242AD08959008F876A /* Defaults+Keys.swift in Sources */,
 				A179D02F2AD09FBD008F876A /* RecipeModelMock.swift in Sources */,
+				A179D0372AD0BA05008F876A /* RecipeModel.swift in Sources */,
+				A179D03E2AD0BBF2008F876A /* Router.swift in Sources */,
+				A179D03B2AD0BA90008F876A /* RecipeDetailView.swift in Sources */,
 				A11901A02AD0732700AF6FDD /* RecipesModel.swift in Sources */,
 				A179D0262AD08D09008F876A /* RecipeCellView.swift in Sources */,
-				A119019E2AD072C200AF6FDD /* RecipeService.swift in Sources */,
+				A119019E2AD072C200AF6FDD /* RecipesService.swift in Sources */,
 				A15CECE32AD07D60003E9DAD /* RecipeListView.swift in Sources */,
+				A179D0402AD0BD83008F876A /* RecipeModelWrapper.swift in Sources */,
 				A119016E2AD06AA400AF6FDD /* RecipeApp.swift in Sources */,
 				A15CECE52AD07D8C003E9DAD /* RecipeListViewModel.swift in Sources */,
 			);
