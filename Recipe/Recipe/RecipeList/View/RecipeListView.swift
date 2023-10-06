@@ -25,7 +25,7 @@ struct RecipeListView: View {
                         VStack {
                             ForEach(viewModel.recipes, id: \.label) { recipe in
                                 RecipeCell(recipe: recipe)
-                                    .padding(.horizontal, 20)
+                                    .padding(.horizontal, 10)
                             }
                         }
                         .scrollDismissesKeyboard(.immediately)
@@ -50,6 +50,7 @@ struct RecipeListView: View {
             viewModel.processAction(action: .startSearch)
         }
         .onAppear {
+            viewModel.query = "Chicken"
             viewModel.processAction(action: .startSearch)
         }
     }

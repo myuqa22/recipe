@@ -13,7 +13,7 @@ class RecipeListViewModel: ObservableObject {
     @Published var recipes: [Recipe] = []
     @Published var query: String = String()
     
-    let service = RecipeService(apiService: EdamamServiceMock())
+    let service = RecipeService(apiService: EdamamService())
     
     enum Action {
         case startSearch
