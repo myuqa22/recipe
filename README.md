@@ -11,7 +11,6 @@ Die User Interactions werden in dem ViewModel mithilfe von Action Enums registri
 
 
 ## Bisher umgesetzte Features:
-- 
 - MVVM
 - Abindung der Rezept REST API von EDAMAM
 - Suchfeld mit integriertem Suchverlauf
@@ -24,4 +23,3 @@ Die User Interactions werden in dem ViewModel mithilfe von Action Enums registri
 - Filtern
 - Mehr Tests
 - Favorisieren von Rezepten
-- 
