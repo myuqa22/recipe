@@ -12,6 +12,7 @@ class RecipeListViewModel: ObservableObject {
     
     @Published var recipes: [Recipe] = []
     @Published var query: String = String()
+    @Published var isLoading: Bool = false
     
     let service = RecipeService(apiService: EdamamService())
     
@@ -25,18 +26,24 @@ class RecipeListViewModel: ObservableObject {
         case .startSearch:
             Task {
                 do {
+                    isLoading = true
                     recipes = try await service.getRecipes(by: query)
+                    isLoading = false
                 } catch {
                     print(error)
+                    isLoading = false
                 }
             }
         case .selectSearchHistoryQuery(let searchHistoryQuery):
             query = searchHistoryQuery
             Task {
                 do {
+                    isLoading = true
                     recipes = try await service.getRecipes(by: searchHistoryQuery)
+                    isLoading = false
                 } catch {
                     print(error)
+                    isLoading = false
                 }
                 
             }

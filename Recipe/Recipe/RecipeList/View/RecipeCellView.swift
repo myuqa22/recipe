@@ -9,7 +9,7 @@ import SwiftUI
 
 import Kingfisher
 
-struct RecipeCell: View {
+struct RecipeCellView: View {
     
     let recipe: Recipe
     
@@ -43,7 +43,7 @@ struct RecipeCell_Previews: PreviewProvider {
         let recipe = Recipe.mock
         VStack {
             ForEach(1..<12) { _ in
-                RecipeCell(recipe: recipe)
+                RecipeCellView(recipe: recipe)
             }
         }
         .background(.gray.opacity(0.1))

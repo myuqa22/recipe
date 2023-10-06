@@ -24,7 +24,7 @@ struct RecipeListView: View {
                     ScrollView {
                         VStack {
                             ForEach(viewModel.recipes, id: \.label) { recipe in
-                                RecipeCell(recipe: recipe)
+                                RecipeCellView(recipe: recipe)
                                     .padding(.horizontal, 10)
                             }
                         }
@@ -33,6 +33,12 @@ struct RecipeListView: View {
                 }
                 .navigationTitle("Recipe Search")
                 .padding(0)
+                
+                if viewModel.isLoading {
+                    Color.gray.opacity(0.5).ignoresSafeArea()
+                    ProgressView()
+                        .scaleEffect(1.5)
+                }
             }
         }
         .searchable(
