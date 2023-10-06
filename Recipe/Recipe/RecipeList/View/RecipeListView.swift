@@ -41,6 +41,9 @@ struct RecipeListView: View {
                 }
             }
         }
+        .refreshable {
+            viewModel.processAction(action: .startSearch)
+        }
         .searchable(
             text: $viewModel.query,
             suggestions: {
