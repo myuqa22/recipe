@@ -11,7 +11,8 @@ extension Recipe {
     
     static var mock: Recipe {
         
-        Recipe(label: "Testgericht",
+        Recipe(uri: "https://picsum.photos/200",
+               label: "Testgericht",
                image: "https://picsum.photos/200",
                images: ImagesType(THUMBNAIL: ImageContent(url: "https://picsum.photos/200", width: 50, height: 50),
                                   SMALL: ImageContent(url: "https://picsum.photos/200", width: 50, height: 50),

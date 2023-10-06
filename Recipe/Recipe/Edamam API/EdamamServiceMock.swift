@@ -11,7 +11,7 @@ public class EdamamServiceMock: EdamamServiceProtocol {
     
     public init() {}
     
-    func getRecipes(by query: String) -> RecipesDto? {
+    func getRecipesBy(query: String) -> RecipesDto? {
         let decoder = JSONDecoder()
         let path = Bundle.main.path(forResource: "MockData", ofType: "json")
         let mock = try! String(contentsOfFile: path!)
@@ -24,8 +24,10 @@ public class EdamamServiceMock: EdamamServiceProtocol {
             print(error)
             return nil
         }
-        
-        
+    }
+    
+    func getRecipesBy(url: URL) async throws -> RecipesDto? {
+        getRecipesBy(query: "")
     }
     
 }

@@ -15,7 +15,11 @@ class RecipeService {
         self.apiService = apiService
     }
     
-    func getRecipes(by query: String) async throws -> [Recipe] {
-        try await apiService.getRecipes(by: query)?.hits?.compactMap({ $0.recipe }) ?? []
+    func getRecipes(by query: String) async throws -> RecipesDto? {
+        try await apiService.getRecipesBy(query: query) 
+    }
+    
+    func paginateRecipes(from url: String) async throws -> RecipesDto? {
+        try await apiService.getRecipesBy(url: URL(string: url)!)
     }
 }

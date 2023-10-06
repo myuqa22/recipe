@@ -8,7 +8,8 @@
 import Foundation
 
 protocol EdamamServiceProtocol {
-    func getRecipes(by query: String) async throws -> RecipesDto?
+    func getRecipesBy(query: String) async throws -> RecipesDto?
+    func getRecipesBy(url: URL) async throws -> RecipesDto?
 }
 
 class EdamamService: EdamamServiceProtocol {
@@ -18,7 +19,7 @@ class EdamamService: EdamamServiceProtocol {
     let appKey = "9425d5f01318992465170a489abceb56"
     let type = "public"
     
-    func getRecipes(by query: String) async throws -> RecipesDto? {
+    func getRecipesBy(query: String) async throws -> RecipesDto? {
         
         let queryItems = [
             URLQueryItem(name: "app_id", value: appId),
@@ -33,7 +34,15 @@ class EdamamService: EdamamServiceProtocol {
         let decoded = try JSONDecoder().decode(RecipesDto.self, from: data)
         
         return decoded
+    }
+    
+    func getRecipesBy(url: URL) async throws -> RecipesDto? {
         
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        let decoded = try JSONDecoder().decode(RecipesDto.self, from: data)
+        
+        return decoded
     }
     
 }

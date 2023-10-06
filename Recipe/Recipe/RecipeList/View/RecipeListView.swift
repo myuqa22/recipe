@@ -22,13 +22,21 @@ struct RecipeListView: View {
                 VStack {
                     Text("Searching for: \(viewModel.query)")
                     ScrollView {
-                        VStack {
-                            ForEach(viewModel.recipes, id: \.label) { recipe in
+                        LazyVStack {
+                            ForEach(viewModel.recipes, id: \.uri) { recipe in
                                 RecipeCellView(recipe: recipe)
                                     .padding(.horizontal, 10)
                             }
+                            if viewModel.nextPageUrl != nil {
+                                ProgressView()
+                                    .padding()
+                                    .onAppear {
+                                        viewModel.processAction(action: .triggerPagination)
+                                    }
+                            }
                         }
                         .scrollDismissesKeyboard(.immediately)
+                       
                     }
                 }
                 .navigationTitle("Recipe Search")
@@ -47,7 +55,7 @@ struct RecipeListView: View {
         .searchable(
             text: $viewModel.query,
             suggestions: {
-                ForEach(searchHistory, id: \.hashValue) { query in
+                ForEach(searchHistory.reversed(), id: \.hashValue) { query in
                     Button {
                         viewModel.processAction(action: .selectSearchHistoryQuery(query))
                     } label: {
