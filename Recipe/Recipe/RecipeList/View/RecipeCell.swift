@@ -16,7 +16,7 @@ struct RecipeCell: View {
     var body: some View {
         HStack {
             VStack {
-                Text(recipe.label)
+                Text(recipe.label ?? String())
                     .font(.title2)
                     .fontWeight(.bold)
                 Spacer()
@@ -26,7 +26,7 @@ struct RecipeCell: View {
             
             Spacer()
             
-            KFImage(URL(string: recipe.image)!)
+            KFImage(URL(string: (recipe.image ?? String())!))
                 .resizable()
                 .scaledToFit()
                 .frame(height: 100)
@@ -40,15 +40,7 @@ struct RecipeCell_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        let recipe = Recipe(
-            label: "Chicken Vesuvio",
-            image: "https://picsum.photos/200",
-            images: ImagesType(
-                THUMBNAIL: ImageContent(url: String(), width: 1, height: 1),
-                SMALL: ImageContent(url: "", width: 1, height: 1),
-                REGULAR: ImageContent(url: "", width: 1, height: 1)),
-            source: "Serious Eats",
-            url: "http://www.seriouseats.com/recipes/2011/12/chicken-vesuvio-recipe.html")
+        let recipe = Recipe.mock
         VStack {
             ForEach(1..<12) { _ in
                 RecipeCell(recipe: recipe)

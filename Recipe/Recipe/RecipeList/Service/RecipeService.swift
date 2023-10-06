@@ -16,6 +16,6 @@ class RecipeService {
     }
     
     func getRecipes(by query: String) async throws -> [Recipe] {
-        try await apiService.getRecipes(by: query)?.hits.map({ $0.recipe }) ?? []
+        try await apiService.getRecipes(by: query)?.hits?.compactMap({ $0.recipe }) ?? []
     }
 }

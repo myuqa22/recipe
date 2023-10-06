@@ -24,12 +24,21 @@ class RecipeListViewModel: ObservableObject {
         switch action {
         case .startSearch:
             Task {
-                recipes = try await service.getRecipes(by: query)
+                do {
+                    recipes = try await service.getRecipes(by: query)
+                } catch {
+                    print(error)
+                }
             }
         case .selectSearchHistoryQuery(let searchHistoryQuery):
             query = searchHistoryQuery
             Task {
-                recipes = try await service.getRecipes(by: searchHistoryQuery)
+                do {
+                    recipes = try await service.getRecipes(by: searchHistoryQuery)
+                } catch {
+                    print(error)
+                }
+                
             }
         }
     }
