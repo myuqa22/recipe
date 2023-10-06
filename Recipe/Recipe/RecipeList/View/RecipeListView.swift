@@ -20,9 +20,18 @@ struct RecipeListView: View {
             ZStack {
                 Color.gray.opacity(0.1).ignoresSafeArea()
                 VStack {
+                    
                     Text("Searching for: \(viewModel.query)")
+                        .opacity(viewModel.query.isEmpty ? 0 : 1)
+                    
                     ScrollView {
                         LazyVStack {
+                            if viewModel.recipes.isEmpty {
+                                Text("No recipes found.")
+                                    .font(.title3)
+                                Text("Enter a keyword to search for a recipe.")
+                                    .font(.body)
+                            }
                             ForEach(viewModel.recipes, id: \.uri) { recipe in
                                 RecipeCellView(recipe: recipe)
                                     .padding(.horizontal, 10)
@@ -63,10 +72,6 @@ struct RecipeListView: View {
                 }
             })
         .onSubmit(of: .search) {
-            viewModel.processAction(action: .startSearch)
-        }
-        .onAppear {
-            viewModel.query = "Chicken"
             viewModel.processAction(action: .startSearch)
         }
     }

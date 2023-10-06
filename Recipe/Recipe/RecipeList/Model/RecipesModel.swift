@@ -48,7 +48,7 @@ struct Recipe: Codable {
     let ingredientLines: [String]?
     let ingredients: [Ingredient]?
     let calories: Double?
-    let totalCO2Emissions: Double?
+//    let totalCO2Emissions: Double?
     let co2EmissionsClass: String?
     let totalWeight: Double?
     let totalTime: Double?

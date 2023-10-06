@@ -30,6 +30,7 @@ class RecipeListViewModel: ObservableObject {
         
         switch action {
         case .startSearch:
+            guard !query.isEmpty else { return }
             Task {
                 do {
                     isLoading = true

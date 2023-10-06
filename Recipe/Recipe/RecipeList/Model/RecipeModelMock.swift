@@ -35,7 +35,6 @@ extension Recipe {
                                         image: "https://picsum.photos/200")
                ],
                calories: 1.0,
-               totalCO2Emissions: 1.0,
                co2EmissionsClass: "Z",
                totalWeight: 1.0,
                totalTime: 1.0,

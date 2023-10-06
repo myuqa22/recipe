@@ -14,7 +14,8 @@ final class EdamamServiceTest: XCTestCase {
         
         let mockService = EdamamServiceMock()
         
-        let result = mockService.getRecipes(by: "chicken")
+        let result = mockService.getRecipesBy(query: "chicken")
+        
         XCTAssertNotNil(result)
     }
     
