@@ -12,19 +12,20 @@
 		A11901722AD06AA400AF6FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11901712AD06AA400AF6FDD /* Assets.xcassets */; };
 		A11901762AD06AA400AF6FDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11901752AD06AA400AF6FDD /* Preview Assets.xcassets */; };
 		A11901802AD06AA500AF6FDD /* RecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119017F2AD06AA500AF6FDD /* RecipeTests.swift */; };
-		A119018A2AD06AA500AF6FDD /* RecipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11901892AD06AA500AF6FDD /* RecipeUITests.swift */; };
-		A119018C2AD06AA500AF6FDD /* RecipeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119018B2AD06AA500AF6FDD /* RecipeUITestsLaunchTests.swift */; };
+		A119019E2AD072C200AF6FDD /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119019D2AD072C200AF6FDD /* RecipeService.swift */; };
+		A11901A02AD0732700AF6FDD /* RecipesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119019F2AD0732700AF6FDD /* RecipesModel.swift */; };
+		A11901A32AD0742D00AF6FDD /* EdamamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11901A22AD0742D00AF6FDD /* EdamamService.swift */; };
+		A11901A52AD0760100AF6FDD /* EdamamServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11901A42AD0760100AF6FDD /* EdamamServiceMock.swift */; };
+		A15CECE02AD0793B003E9DAD /* EdamamServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15CECDF2AD0793B003E9DAD /* EdamamServiceTest.swift */; };
+		A15CECE32AD07D60003E9DAD /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15CECE22AD07D60003E9DAD /* RecipeListView.swift */; };
+		A15CECE52AD07D8C003E9DAD /* RecipeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15CECE42AD07D8C003E9DAD /* RecipeListViewModel.swift */; };
+		A179D01E2AD082A8008F876A /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = A179D01D2AD082A8008F876A /* MockData.json */; };
+		A179D0212AD0890F008F876A /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = A179D0202AD0890F008F876A /* Defaults */; };
+		A179D0242AD08959008F876A /* Defaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D0232AD08959008F876A /* Defaults+Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A119017C2AD06AA500AF6FDD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A11901622AD06AA400AF6FDD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A11901692AD06AA400AF6FDD;
-			remoteInfo = Recipe;
-		};
-		A11901862AD06AA500AF6FDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A11901622AD06AA400AF6FDD /* Project object */;
 			proxyType = 1;
@@ -42,9 +43,15 @@
 		A11901752AD06AA400AF6FDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A119017B2AD06AA500AF6FDD /* RecipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A119017F2AD06AA500AF6FDD /* RecipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTests.swift; sourceTree = "<group>"; };
-		A11901852AD06AA500AF6FDD /* RecipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A11901892AD06AA500AF6FDD /* RecipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeUITests.swift; sourceTree = "<group>"; };
-		A119018B2AD06AA500AF6FDD /* RecipeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A119019D2AD072C200AF6FDD /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
+		A119019F2AD0732700AF6FDD /* RecipesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesModel.swift; sourceTree = "<group>"; };
+		A11901A22AD0742D00AF6FDD /* EdamamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamService.swift; sourceTree = "<group>"; };
+		A11901A42AD0760100AF6FDD /* EdamamServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamServiceMock.swift; sourceTree = "<group>"; };
+		A15CECDF2AD0793B003E9DAD /* EdamamServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamServiceTest.swift; sourceTree = "<group>"; };
+		A15CECE22AD07D60003E9DAD /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
+		A15CECE42AD07D8C003E9DAD /* RecipeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewModel.swift; sourceTree = "<group>"; };
+		A179D01D2AD082A8008F876A /* MockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
+		A179D0232AD08959008F876A /* Defaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Keys.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,17 +59,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A179D0212AD0890F008F876A /* Defaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A11901782AD06AA500AF6FDD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A11901822AD06AA500AF6FDD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,7 +78,6 @@
 			children = (
 				A119016C2AD06AA400AF6FDD /* Recipe */,
 				A119017E2AD06AA500AF6FDD /* RecipeTests */,
-				A11901882AD06AA500AF6FDD /* RecipeUITests */,
 				A119016B2AD06AA400AF6FDD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +87,6 @@
 			children = (
 				A119016A2AD06AA400AF6FDD /* Recipe.app */,
 				A119017B2AD06AA500AF6FDD /* RecipeTests.xctest */,
-				A11901852AD06AA500AF6FDD /* RecipeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +96,9 @@
 			children = (
 				A119016D2AD06AA400AF6FDD /* RecipeApp.swift */,
 				A119016F2AD06AA400AF6FDD /* ContentView.swift */,
+				A11901982AD071F900AF6FDD /* RecipeList */,
+				A11901A12AD073F000AF6FDD /* Edamam API */,
+				A179D0222AD08943008F876A /* Defaults */,
 				A11901712AD06AA400AF6FDD /* Assets.xcassets */,
 				A11901732AD06AA400AF6FDD /* Recipe.entitlements */,
 				A11901742AD06AA400AF6FDD /* Preview Content */,
@@ -116,17 +118,70 @@
 			isa = PBXGroup;
 			children = (
 				A119017F2AD06AA500AF6FDD /* RecipeTests.swift */,
+				A15CECDF2AD0793B003E9DAD /* EdamamServiceTest.swift */,
 			);
 			path = RecipeTests;
 			sourceTree = "<group>";
 		};
-		A11901882AD06AA500AF6FDD /* RecipeUITests */ = {
+		A11901982AD071F900AF6FDD /* RecipeList */ = {
 			isa = PBXGroup;
 			children = (
-				A11901892AD06AA500AF6FDD /* RecipeUITests.swift */,
-				A119018B2AD06AA500AF6FDD /* RecipeUITestsLaunchTests.swift */,
+				A11901992AD0721B00AF6FDD /* Model */,
+				A119019A2AD0722600AF6FDD /* View */,
+				A119019B2AD0722E00AF6FDD /* ViewModel */,
+				A119019C2AD0723A00AF6FDD /* Service */,
 			);
-			path = RecipeUITests;
+			path = RecipeList;
+			sourceTree = "<group>";
+		};
+		A11901992AD0721B00AF6FDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A119019F2AD0732700AF6FDD /* RecipesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A119019A2AD0722600AF6FDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A15CECE22AD07D60003E9DAD /* RecipeListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A119019B2AD0722E00AF6FDD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A15CECE42AD07D8C003E9DAD /* RecipeListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A119019C2AD0723A00AF6FDD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A119019D2AD072C200AF6FDD /* RecipeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A11901A12AD073F000AF6FDD /* Edamam API */ = {
+			isa = PBXGroup;
+			children = (
+				A11901A22AD0742D00AF6FDD /* EdamamService.swift */,
+				A11901A42AD0760100AF6FDD /* EdamamServiceMock.swift */,
+				A179D01D2AD082A8008F876A /* MockData.json */,
+			);
+			path = "Edamam API";
+			sourceTree = "<group>";
+		};
+		A179D0222AD08943008F876A /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				A179D0232AD08959008F876A /* Defaults+Keys.swift */,
+			);
+			path = Defaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +200,9 @@
 			dependencies = (
 			);
 			name = Recipe;
+			packageProductDependencies = (
+				A179D0202AD0890F008F876A /* Defaults */,
+			);
 			productName = Recipe;
 			productReference = A119016A2AD06AA400AF6FDD /* Recipe.app */;
 			productType = "com.apple.product-type.application";
@@ -167,24 +225,6 @@
 			productReference = A119017B2AD06AA500AF6FDD /* RecipeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A11901842AD06AA500AF6FDD /* RecipeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A11901952AD06AA500AF6FDD /* Build configuration list for PBXNativeTarget "RecipeUITests" */;
-			buildPhases = (
-				A11901812AD06AA500AF6FDD /* Sources */,
-				A11901822AD06AA500AF6FDD /* Frameworks */,
-				A11901832AD06AA500AF6FDD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A11901872AD06AA500AF6FDD /* PBXTargetDependency */,
-			);
-			name = RecipeUITests;
-			productName = RecipeUITests;
-			productReference = A11901852AD06AA500AF6FDD /* RecipeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,10 +240,7 @@
 					};
 					A119017A2AD06AA500AF6FDD = {
 						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = A11901692AD06AA400AF6FDD;
-					};
-					A11901842AD06AA500AF6FDD = {
-						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 						TestTargetID = A11901692AD06AA400AF6FDD;
 					};
 				};
@@ -217,13 +254,15 @@
 				Base,
 			);
 			mainGroup = A11901612AD06AA300AF6FDD;
+			packageReferences = (
+				A179D01F2AD0890F008F876A /* XCRemoteSwiftPackageReference "Defaults" */,
+			);
 			productRefGroup = A119016B2AD06AA400AF6FDD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A11901692AD06AA400AF6FDD /* Recipe */,
 				A119017A2AD06AA500AF6FDD /* RecipeTests */,
-				A11901842AD06AA500AF6FDD /* RecipeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,18 +273,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A11901762AD06AA400AF6FDD /* Preview Assets.xcassets in Resources */,
+				A179D01E2AD082A8008F876A /* MockData.json in Resources */,
 				A11901722AD06AA400AF6FDD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A11901792AD06AA500AF6FDD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A11901832AD06AA500AF6FDD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,8 +292,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11901A52AD0760100AF6FDD /* EdamamServiceMock.swift in Sources */,
 				A11901702AD06AA400AF6FDD /* ContentView.swift in Sources */,
+				A11901A32AD0742D00AF6FDD /* EdamamService.swift in Sources */,
+				A179D0242AD08959008F876A /* Defaults+Keys.swift in Sources */,
+				A11901A02AD0732700AF6FDD /* RecipesModel.swift in Sources */,
+				A119019E2AD072C200AF6FDD /* RecipeService.swift in Sources */,
+				A15CECE32AD07D60003E9DAD /* RecipeListView.swift in Sources */,
 				A119016E2AD06AA400AF6FDD /* RecipeApp.swift in Sources */,
+				A15CECE52AD07D8C003E9DAD /* RecipeListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,16 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A15CECE02AD0793B003E9DAD /* EdamamServiceTest.swift in Sources */,
 				A11901802AD06AA500AF6FDD /* RecipeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A11901812AD06AA500AF6FDD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A119018C2AD06AA500AF6FDD /* RecipeUITestsLaunchTests.swift in Sources */,
-				A119018A2AD06AA500AF6FDD /* RecipeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,11 +320,6 @@
 			isa = PBXTargetDependency;
 			target = A11901692AD06AA400AF6FDD /* Recipe */;
 			targetProxy = A119017C2AD06AA500AF6FDD /* PBXContainerItemProxy */;
-		};
-		A11901872AD06AA500AF6FDD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A11901692AD06AA400AF6FDD /* Recipe */;
-			targetProxy = A11901862AD06AA500AF6FDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -347,6 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,6 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -419,6 +448,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -427,9 +457,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -437,10 +466,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gerwin.lukman.Recipe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -457,6 +488,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -465,9 +497,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -475,10 +506,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gerwin.lukman.Recipe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -487,11 +520,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K76XQHSPRP;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gerwin.lukman.RecipeTests;
@@ -499,6 +533,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Recipe";
@@ -510,11 +545,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K76XQHSPRP;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gerwin.lukman.RecipeTests;
@@ -525,50 +561,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Recipe";
-			};
-			name = Release;
-		};
-		A11901962AD06AA500AF6FDD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K76XQHSPRP;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gerwin.lukman.RecipeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Recipe;
-			};
-			name = Debug;
-		};
-		A11901972AD06AA500AF6FDD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K76XQHSPRP;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gerwin.lukman.RecipeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Recipe;
 			};
 			name = Release;
 		};
@@ -602,16 +594,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A11901952AD06AA500AF6FDD /* Build configuration list for PBXNativeTarget "RecipeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A11901962AD06AA500AF6FDD /* Debug */,
-				A11901972AD06AA500AF6FDD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A179D01F2AD0890F008F876A /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				kind = exactVersion;
+				version = 7.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A179D0202AD0890F008F876A /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A179D01F2AD0890F008F876A /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A11901622AD06AA400AF6FDD /* Project object */;
 }
