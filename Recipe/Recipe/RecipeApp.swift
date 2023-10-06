@@ -15,4 +15,5 @@ struct RecipeApp: App {
             ContentView()
         }
     }
+    
 }

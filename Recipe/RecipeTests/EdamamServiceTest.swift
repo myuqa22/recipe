@@ -11,6 +11,7 @@ import XCTest
 final class EdamamServiceTest: XCTestCase {
     
     func testParse() throws {
+        
         let mockService = EdamamServiceMock()
         
         let result = mockService.getRecipes(by: "chicken")

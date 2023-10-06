@@ -17,19 +17,23 @@ struct RecipesDto: Codable {
 }
 
 struct LinksContent: Codable {
+    
     let next: NextContent?
 }
 
 struct NextContent: Codable {
+    
     let href: String?
     let title: String?
 }
 
 struct RecipeContent: Codable {
+    
     let recipe: Recipe?
 }
 
 struct Recipe: Codable {
+    
     let uri: String
     let label: String?
     let image: String?
@@ -57,17 +61,21 @@ struct Recipe: Codable {
 }
 
 struct ImageContent: Codable {
+    
     let url: String?
     let width: Int?
     let height: Int?
 }
+
 struct ImagesType: Codable {
+    
     let THUMBNAIL: ImageContent?
     let SMALL: ImageContent?
     let REGULAR: ImageContent?
 }
 
 struct Ingredient: Codable {
+    
     let text: String?
     let quantity: Double?
     let measure: String?

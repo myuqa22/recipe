@@ -10,4 +10,5 @@ import Defaults
 extension Defaults.Keys {
     
     static let searchHistory = Key<[String]>("searchHistory", default: ["Test"])
+    
 }

@@ -48,6 +48,6 @@ struct RecipeCell_Previews: PreviewProvider {
         }
         .background(.gray.opacity(0.1))
         .padding(20)
-        
     }
+    
 }

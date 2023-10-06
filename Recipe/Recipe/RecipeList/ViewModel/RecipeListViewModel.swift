@@ -70,7 +70,6 @@ class RecipeListViewModel: ObservableObject {
                         recipes.append(contentsOf: newRecipies)
                         self.nextPageUrl = recipesDto._links?.next?.href
                     }
-                    
                 } catch {
                     print(error)
                 }
@@ -82,8 +81,10 @@ class RecipeListViewModel: ObservableObject {
         
         Defaults[.searchHistory].removeAll(where: { $0 == query })
         Defaults[.searchHistory].append(query)
+        
         if Defaults[.searchHistory].count >= 10 {
             Defaults[.searchHistory].remove(at: 0)
         }
     }
+    
 }

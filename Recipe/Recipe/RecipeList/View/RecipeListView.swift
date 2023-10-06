@@ -36,7 +36,6 @@ struct RecipeListView: View {
                             }
                         }
                         .scrollDismissesKeyboard(.immediately)
-                       
                     }
                 }
                 .navigationTitle("Recipe Search")
@@ -71,10 +70,13 @@ struct RecipeListView: View {
             viewModel.processAction(action: .startSearch)
         }
     }
+    
 }
 
 struct RecipeListView_Previews: PreviewProvider {
+    
     static var previews: some View {
         RecipeListView()
     }
+    
 }
