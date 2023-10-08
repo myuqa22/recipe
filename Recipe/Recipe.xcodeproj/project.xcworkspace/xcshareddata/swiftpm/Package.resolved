@@ -26,6 +26,15 @@
         "revision" : "557576032736fd3140422baefb68b8f76c55088f",
         "version" : "1.21.0"
       }
+    },
+    {
+      "identity" : "swiftmessages",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftKickMobile/SwiftMessages",
+      "state" : {
+        "revision" : "c2bcb351434ae044a486803ad1751b0e10f0d4e1",
+        "version" : "9.0.8"
+      }
     }
   ],
   "version" : 2

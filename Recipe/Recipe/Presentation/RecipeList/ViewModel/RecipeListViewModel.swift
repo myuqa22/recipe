@@ -8,6 +8,7 @@
 import Foundation
 
 import Defaults
+import SwiftMessages
 
 @MainActor
 class RecipeListViewModel: ObservableObject {
@@ -15,6 +16,7 @@ class RecipeListViewModel: ObservableObject {
     @Published var recipes: [Recipe] = []
     @Published var query: String = String()
     @Published var isLoading: Bool = false
+    @Published var errorMessage: String?
     
     let service = RecipesService(apiService: EdamamService())
     
@@ -26,7 +28,7 @@ class RecipeListViewModel: ObservableObject {
         case triggerPagination
     }
     
-    func processAction(action: Action){
+    func processAction(action: Action) {
         
         switch action {
         case .startSearch:
@@ -41,7 +43,7 @@ class RecipeListViewModel: ObservableObject {
                     handleSearchHistory()
                     isLoading = false
                 } catch {
-                    print(error)
+                    showError(message: error.localizedDescription)
                     isLoading = false
                 }
             }
@@ -58,7 +60,7 @@ class RecipeListViewModel: ObservableObject {
                     handleSearchHistory()
                     isLoading = false
                 } catch {
-                    print(error)
+                    showError(message: error.localizedDescription)
                     isLoading = false
                 }
             }
@@ -72,7 +74,7 @@ class RecipeListViewModel: ObservableObject {
                         self.nextPageUrl = recipesDto._links?.next?.href
                     }
                 } catch {
-                    print(error)
+                    showError(message: error.localizedDescription)
                 }
             }
         }
@@ -86,6 +88,11 @@ class RecipeListViewModel: ObservableObject {
         if Defaults[.searchHistory].count >= 10 {
             Defaults[.searchHistory].remove(at: 0)
         }
+    }
+    
+    private func showError(message: String) {
+        
+        SwiftMessages.show(view: Message.getView(with: message))
     }
     
 }

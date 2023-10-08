@@ -30,7 +30,7 @@ class EdamamService: EdamamServiceProtocol {
             URLQueryItem(name: "type", value: type)
         ]
         url.append(queryItems: queryItems)
-    
+        
         let (data, _) = try await URLSession.shared.data(from: url)
         let decoded = try JSONDecoder().decode(RecipesDto.self, from: data)
         

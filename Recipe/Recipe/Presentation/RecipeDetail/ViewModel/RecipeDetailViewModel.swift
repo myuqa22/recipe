@@ -7,7 +7,4 @@
 
 import Foundation
 
-class RecipeDetailViewModel: ObservableObject {
-    
-    
-}
+class RecipeDetailViewModel: ObservableObject { }

@@ -22,7 +22,6 @@ struct RecipeListView: View {
             ZStack {
                 Color.gray.opacity(0.1).ignoresSafeArea()
                 VStack {
-                    
                     Text("Searching for: \(viewModel.query)")
                         .opacity(viewModel.query.isEmpty ? 0 : 1)
                     

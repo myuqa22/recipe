@@ -30,7 +30,8 @@
 		A179D0392AD0BA6D008F876A /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D0382AD0BA6D008F876A /* RecipeDetailViewModel.swift */; };
 		A179D03B2AD0BA90008F876A /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D03A2AD0BA90008F876A /* RecipeDetailView.swift */; };
 		A179D03E2AD0BBF2008F876A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D03D2AD0BBF2008F876A /* Router.swift */; };
-		A179D0402AD0BD83008F876A /* RecipeModelWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D03F2AD0BD83008F876A /* RecipeModelWrapper.swift */; };
+		A179D0462AD3027C008F876A /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = A179D0452AD3027C008F876A /* SwiftMessages */; };
+		A179D0492AD30358008F876A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179D0482AD30358008F876A /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +68,7 @@
 		A179D0382AD0BA6D008F876A /* RecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModel.swift; sourceTree = "<group>"; };
 		A179D03A2AD0BA90008F876A /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		A179D03D2AD0BBF2008F876A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		A179D03F2AD0BD83008F876A /* RecipeModelWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModelWrapper.swift; sourceTree = "<group>"; };
+		A179D0482AD30358008F876A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 			files = (
 				A179D0292AD08DC3008F876A /* Kingfisher in Frameworks */,
 				A179D0212AD0890F008F876A /* Defaults in Frameworks */,
+				A179D0462AD3027C008F876A /* SwiftMessages in Frameworks */,
 				A179D02D2AD093D4008F876A /* netfox in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +118,7 @@
 				A119016F2AD06AA400AF6FDD /* ContentView.swift */,
 				A179D03D2AD0BBF2008F876A /* Router.swift */,
 				A179D0302AD0B6FE008F876A /* Presentation */,
+				A119019C2AD0723A00AF6FDD /* Service */,
 				A179D0312AD0B751008F876A /* Helper */,
 				A11901712AD06AA400AF6FDD /* Assets.xcassets */,
 				A11901732AD06AA400AF6FDD /* Recipe.entitlements */,
@@ -147,7 +150,6 @@
 				A11901992AD0721B00AF6FDD /* Model */,
 				A119019A2AD0722600AF6FDD /* View */,
 				A119019B2AD0722E00AF6FDD /* ViewModel */,
-				A119019C2AD0723A00AF6FDD /* Service */,
 			);
 			path = RecipeList;
 			sourceTree = "<group>";
@@ -215,6 +217,7 @@
 		A179D0312AD0B751008F876A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				A179D0472AD30346008F876A /* SwiftMessages */,
 				A11901A12AD073F000AF6FDD /* Edamam API */,
 				A179D0222AD08943008F876A /* Defaults */,
 			);
@@ -235,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				A179D0362AD0BA05008F876A /* RecipeModel.swift */,
-				A179D03F2AD0BD83008F876A /* RecipeModelWrapper.swift */,
 				A179D02E2AD09FBD008F876A /* RecipeModelMock.swift */,
 			);
 			path = Model;
@@ -265,6 +267,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A179D0472AD30346008F876A /* SwiftMessages */ = {
+			isa = PBXGroup;
+			children = (
+				A179D0482AD30358008F876A /* Message.swift */,
+			);
+			path = SwiftMessages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,6 +295,7 @@
 				A179D0202AD0890F008F876A /* Defaults */,
 				A179D0282AD08DC3008F876A /* Kingfisher */,
 				A179D02C2AD093D4008F876A /* netfox */,
+				A179D0452AD3027C008F876A /* SwiftMessages */,
 			);
 			productName = Recipe;
 			productReference = A119016A2AD06AA400AF6FDD /* Recipe.app */;
@@ -341,6 +352,7 @@
 				A179D01F2AD0890F008F876A /* XCRemoteSwiftPackageReference "Defaults" */,
 				A179D0272AD08DC3008F876A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				A179D02B2AD093D4008F876A /* XCRemoteSwiftPackageReference "netfox" */,
+				A179D0442AD3027C008F876A /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 			);
 			productRefGroup = A119016B2AD06AA400AF6FDD /* Products */;
 			projectDirPath = "";
@@ -381,6 +393,7 @@
 				A179D0392AD0BA6D008F876A /* RecipeDetailViewModel.swift in Sources */,
 				A11901702AD06AA400AF6FDD /* ContentView.swift in Sources */,
 				A11901A32AD0742D00AF6FDD /* EdamamService.swift in Sources */,
+				A179D0492AD30358008F876A /* Message.swift in Sources */,
 				A179D0242AD08959008F876A /* Defaults+Keys.swift in Sources */,
 				A179D02F2AD09FBD008F876A /* RecipeModelMock.swift in Sources */,
 				A179D0372AD0BA05008F876A /* RecipeModel.swift in Sources */,
@@ -390,7 +403,6 @@
 				A179D0262AD08D09008F876A /* RecipeCellView.swift in Sources */,
 				A119019E2AD072C200AF6FDD /* RecipesService.swift in Sources */,
 				A15CECE32AD07D60003E9DAD /* RecipeListView.swift in Sources */,
-				A179D0402AD0BD83008F876A /* RecipeModelWrapper.swift in Sources */,
 				A119016E2AD06AA400AF6FDD /* RecipeApp.swift in Sources */,
 				A15CECE52AD07D8C003E9DAD /* RecipeListViewModel.swift in Sources */,
 			);
@@ -713,6 +725,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		A179D0442AD3027C008F876A /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -730,6 +750,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A179D02B2AD093D4008F876A /* XCRemoteSwiftPackageReference "netfox" */;
 			productName = netfox;
+		};
+		A179D0452AD3027C008F876A /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A179D0442AD3027C008F876A /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
