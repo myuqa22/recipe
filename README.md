@@ -9,6 +9,10 @@ Für die Verabreitung der Requests habe ich Asnyc/Await verwendet, weil das neue
 
 Die User Interactions werden in dem ViewModel mithilfe von Action Enums registriert, die einer Funktion handleActions(_:) als Parameter übergeben werden. Eine andere Möglichkeit wäre die Verwendung von Combine. 
 
+## Herausforderungen
+
+Die REST API von EDAMAM gibt für die Rezepte keine eindeutige Id in der Response zurück. Ohne eindeutige Zuordnung war es schwer, die Rezepte ohne Bugs anzuzeigen. Aus diesem Grund habe ich jedem Rezept Model eine eindeutige UUID zugeordnet, indem ich den Decoder Initializer modifiziert habe.
+
 
 ## Bisher umgesetzte Features:
 - MVVM
