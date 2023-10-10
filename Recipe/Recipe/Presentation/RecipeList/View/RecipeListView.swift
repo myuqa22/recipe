@@ -33,7 +33,7 @@ struct RecipeListView: View {
                                 Text("Enter a keyword to search for a recipe.")
                                     .font(.body)
                             }
-                            ForEach(viewModel.recipes, id: \.uri) { recipe in
+                            ForEach(viewModel.recipes, id: \.id) { recipe in
                                 RecipeCellView(recipe: recipe)
                                     .padding(.horizontal, 10)
                                     .clipShape(Rectangle())
@@ -50,7 +50,6 @@ struct RecipeListView: View {
                             }
                         }
                         .scrollDismissesKeyboard(.immediately)
-                        
                     }
                 }
                 .navigationTitle("Recipe Search")
