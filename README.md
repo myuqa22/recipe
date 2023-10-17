@@ -9,13 +9,18 @@ Für die Verabreitung der Requests habe ich Asnyc/Await verwendet, weil das neue
 
 Die User Interactions werden in dem ViewModel mithilfe von Action Enums registriert, die einer Funktion handleActions(_:) als Parameter übergeben werden. Eine andere Möglichkeit wäre die Verwendung von Combine. 
 
+## Technologien
+- MVVM 
+- SwiftUI
+- Concurrency (Async/Await)
+- SPM
+
 ## Herausforderungen
 
 Die REST API von EDAMAM gibt für die Rezepte keine eindeutige Id in der Response zurück. Ohne eindeutige Zuordnung war es schwer, die Rezepte ohne Bugs anzuzeigen. Aus diesem Grund habe ich jedem Rezept Model eine eindeutige UUID zugeordnet, indem ich den Decoder Initializer modifiziert habe.
 
 
 ## Bisher umgesetzte Features:
-- MVVM
 - Abindung der Rezept REST API von EDAMAM
 - Suchfeld mit integriertem Suchverlauf
 - Listenansicht
